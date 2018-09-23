@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Use Case #1</h1>
+
+<p>Use case name and identifier: U1 - Account aanmaken 
+Objective: De volgende persoonsgegevens invoeren: auto, faculteit, leeftijd, geslacht, voorwaarden medepassagiers
+Priority: Belangrijk
+Source: Vanuit het de basis benodigdheden voor het systeem 
+Actors: alle gebruikers (chauffeurs en passagiers)
+Flow of events:
+Basic Flow - Een student of medewerker beslist dat hij/zij gebruik wilt maken van de app. Hij/zij moet dan beginnen met het aanmaken van een account, waarin verschillende gegevens moeten worden ingevoerd en de wallet moet worden aangemaakt. Vervolgens kan er gebruik gemaakt worden van de app.
+Alternative Flow - De gebruiker vult iets verkeerd in/ vergeet iets in te vullen en kan zijn account niet voltooiien. Na nog een keer invoeren, gaat het wel goed. 
+Exceptions - De app heeft een storing en de gebruiker kan tijdelijk geen account aanmaken. 
+
+Includes: niet relevant
+Preconditions: alle gebruikers van het platform moeten een account kunnen aanmaken.
+Post conditions: alle gebruikers van het platform moeten door middel van hun account een rit kunnen aanvragen en accepteren, hun wallet kunnen opwaarderen, geld kunnen ontvangen en een waardering achter kunnen laten . 
+Notes/issues: Het eerste wat app gebruikers moeten aangeven is hun spreektaal. Zo kan het verdere proces in deze taal worden uitgevoerd.</p>
+
+<h1>Use Case #2</h1>
+
+<p> Use case name and identifier:  U2 - inzien statistieken besparing
+Objective: Voor de gebruikers van de service is het mogelijk om in de applicatie te zien hoeveel CO2-uitstoot en kosten zij hebben bespaard door de service te gebruiken
+Priority: Niet hoog
+Source: Client 
+Actors: Chauffeur en meerijder
+Flow of Events:
+Basic Flow – De gebruiker krijgt de juiste statistieken te zien wanneer hij/zij deze opvraagt in de applicatie
+Alternative Flow – De gebruiker krijgt statistieken te zien met onjuiste informatie
+Exceptions – De gebruiker krijgt de statistieken niet te zien bij aanvraag
+Includes (other use case IDs): -
+Extends (other use case IDs): -
+Generalizes (other use case IDs): -
+Preconditions: de gebruiker weet niet hoeveel hij/zij heeft bespaard op elk vlak met gebruik van de service
+Postconditions: de gebruiker weet nu hoeveel hij/zij heeft bespaard op elk vlak
+Notes/Issues: - </p>
+
+<h1>Use Case #3</h1>
+
+<p>Use case name and identifier:  U3 - Ritaanvraag doen
+Objective: De gebruiker doet een ritaanvraag aan de chauffeur om van A naar B mee te rijden
+Priority: Hoog
+Source: 
+Actors: Chauffeur en meerijder
+Flow of Events
+Basic Flow – De gebruiker stuurt aan een chauffeur in de buurt een ritaanvraag en de chauffeur ontvangt deze
+Alternative Flow – De aanvraag wordt niet correct verstuurd, de aanvraag wordt niet correct ontvangen, er zit een te lange vertraging in de aanvraag
+Exceptions – Niet versturen van aanvraag
+Includes (other use case IDs): thuisbestemming aangeven
+Extends (other use case IDs): -
+Generalizes (other use case IDs): -
+Preconditions: Geen ritaanvraag gedaan
+Postconditions: Een correct verstuurde ritaanvraag
+Notes/Issues: </p>
+
+<h1>Use Case #4</h1>
+
+<p>Use case name and identifier:  U4 - Ritaanvraag accepteren
+Objective: De chauffeur kan de verstuurde ritaanvraag van de meerijder accepteren zodat een afspraak wordt gemaakt voor de rit
+Priority: Hoog
+Source: 
+Actors: Chauffeur en meerijder
+Flow of Events
+Basic Flow – De chauffeur accepteert / weigert de ritaanvraag van de gebruiker
+Alternative Flow – Het antwoord op de aanvraag komt niet correct door
+Exceptions – Niet versturen van acceptatie
+Includes (other use case IDs): thuisbestemming aangeven
+Extends (other use case IDs): -
+Generalizes (other use case IDs): -
+Preconditions: Geen ritaanvraag gedaan
+Postconditions: Een correct verstuurde ritaanvraag
+Notes/Issues: </p>
+
+<h1>Use Case #5</h1>
+
+<p>Use case name and identifier:  U5  - Chatbericht sturen
+Objective: De chauffeur en de meerijder hebben de mogelijkheid omcommuniceren over precieze tijd van aankomst, andere wensen en overige vragen. 
+Priority: Hoog
+Source: Wensen client
+Actors: Chauffeur en meerijder
+Flow of Events
+Basic Flow – De chauffeur en meerijder kunnen goed en op tijd communiceren over eventuele vragen en opmerkingen 
+Alternative Flow – Het antwoord op de vraag komt te laat
+Exceptions – Niet versturen van acceptatie
+Includes: -
+Extends: -
+Generalizes: -
+Preconditions: Een vraag/opmerking van de chauffeur of meerijder
+Postconditions: Een beantwoorde vraag/opmerking
+Notes/Issues: </p>
+
+<h1>Use Case #6</h1>
+
+<p>Use case name and identifier:  U6  - rit betalen 
+Objective: Na de voltooide rit berekent de app de kosten en kan de meerijden deze via de wallet in de app betalen. Deze betaling ontvangt de chauffeur dan automatisch.  
+Priority: Heel hoog
+Source: Wensen client
+Actors: Chauffeur en meerijder
+Flow of Events
+Basic Flow – De meerijder betaalt direct en dit geld wordt ook direct ontvangen door de chauffeur
+Alternative Flow – De betaling wordt niet gelijk ontvangen op de rekening van de chauffeur doordat er bijvoorbeeld gebruik wordt gemaakt van verschillende banken en er dus vertraging optreedt. 
+Exceptions – De meerijder weigert op tijd en correct te betalen. 
+Includes: Saldo van portomonnee opwaarderen
+Extends: -
+Generalizes: -
+Preconditions: Een voltooide rit en opgeladen wallet
+Postconditions: Een betaalde chauffeur 
+Notes/Issues: - </p>
+
+<h1>Use Case #7</h1>
+
+<p>Use case name and identifier:  U7  - Rating invoeren 
+Objective: Na de voltooide en betaalde rit kan de meerijder de chauffeur beoordelen door middel van een sterren rating. Bij een laag aantal sterren wordt er ook de mogelijkheid geboden om een motivatie bij te voegen. 
+Priority: Niet heel hoog
+Source: Wensen client
+Actors: Meerijder
+Flow of Events
+Basic Flow – De meerijder vult de waardering voor de chauffeur in
+Alternative Flow – De meerijder vult een lage waardering voor de chauffeur in en wordt gevraag een motivatie bij te voegen. 
+Exceptions – De meerijder vult geen waardering in
+Includes: Motivatie rating geven 
+Extends: -
+Generalizes: -
+Preconditions: Een nog niet beoordeelde chauffeur
+Postconditions: Een geupdate rating van de chauffeur
+Notes/Issues: - </p>
+
+
+
+
+
+
+</body>
+</html>
+
