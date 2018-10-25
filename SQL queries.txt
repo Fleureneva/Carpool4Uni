@@ -1,0 +1,4 @@
+CREATE {DATABASE | SCHEMA} [IF NOT EXISTS] db_name
+	[create_specification}
+	
+	
