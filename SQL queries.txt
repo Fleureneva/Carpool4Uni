@@ -1,4 +1,56 @@
-CREATE {DATABASE | SCHEMA} [IF NOT EXISTS] db_name
-	[create_specification}
+CREATE DATABASE c4u
+
+	CREATE TABLE voorkeuren (
+	voorkeur_id int,
+	voorkeur_descr varchar
+	);
+	
+	CREATE TABLE meerijder (
+	id int,
+	voorkeur_id int,
+	faculteit varchar
+	);
+	
+	CREATE TABLE gebruiker (
+	id int,
+	naam varchar,
+	geslacht varchar,
+	leeftijd int,
+	adres varchar,
+	email varchar,
+	rekeningnummer int,
+	meerijder_id int,
+	chauffeur_id int
+	);
+	
+	CREATE TABLE rit (
+	id int,
+	datum varchar,
+	medepassagier int,
+	tijd int,
+	vertreklocatie varchar,
+	eindbestemming varchar,
+	gebruiker_id int
+	);
+	
+	CREATE TABLE auto (
+	aantal_stoelen int,
+	id int,
+	energielabel varchar,
+	);
+	
+	CREATE TABLE chauffeur (
+	id int,
+	auto_id int
+	);
+	
+	CREATE TABLE factuur (
+	id int,
+	reservering_id int,
+	totale_balans_bedrag int,
+	datum varchar,
+	totale_balans int
+	);
+	
 	
 	
