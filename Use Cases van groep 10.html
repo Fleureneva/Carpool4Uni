@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h1>Use Case #1</h1>
+<h1>U1 - Account aanmaken</h1>
 
 <table>
 <tr>
@@ -11,27 +11,55 @@
 </tr>
 <tr>
 	<td><strong>Objective: </td>
-	<td>De volgende persoonsgegevens invoeren: auto, faculteit, leeftijd, geslacht, voorwaarden medepassagiers </td>
+	<td>Een account aanmaken, zodat  </td>
 </tr>
 <tr>
 	<td><strong> Priority: </td>
-	<td>Belangrijk </td>
-</tr>
-<tr>
-	<td><strong> Source: </td>
-	<td>Vanuit het de basis benodigdheden voor het systeem </td>
+	<td>1 </td>
 </tr>
 <tr>
 	<td><strong> Actors: </td>
-	<td>Chaufeurs en passagiers </td>
+	<td>Chaufeurs en meerijder </td>
 </tr>
 <tr>
 	<td><strong> Flow of events: </td>
 	<td>
 		<ul>
-		<li><b>Basic flow:</b> Een student of medewerker beslist dat hij/zij gebruik wilt maken van de app. Hij/zij moet dan beginnen met het aanmaken van een account, waarin verschillende gegevens moeten worden ingevoerd en de wallet moet worden aangemaakt. Vervolgens kan er gebruik gemaakt worden van de app. </li>
-		<li><b>Alternative flow:</b> De gebruiker vult iets verkeerd in/ vergeet iets in te vullen en kan zijn account niet voltooien. Na nog een keer invoeren, gaat het wel goed.</li>
-		<li><b>Exceptions:</b> De app heeft een storing en de gebruiker kan tijdelijk geen account aanmaken.</li>
+		<li><b>Basic flow:</b>
+			<ol>
+			<li>Gebruiker klikt op de 'Aanmeld'knop. </li>
+			<li>Gebruiker vult in of hij voornamelijk meerijder of chaufeur is.</li> 
+			<li>Gebruiker vult naam en (e-mail) adresgegevens in. </li>
+			<li>Gebruiker vult rekeningnummer, leeftijd, geslacht, faculteit en (optioneel) auto in.</li>
+			<li>Systeem valideert rekeningnummer</li>
+			<li>Gebruiker maakt een gebruikersnaam en wachtwoord aan. </li>
+			<li>Systeem controleert gebruikersnaam en wachtwoord </li>
+			<li>Systeem maakt een account aan en verbindt de ingevulde gegevens met de gebruikersnaam en wachtwoord. </li>
+			</ol>
+		</li>
+		<li><b>Alternative flow:</b> 
+			<ul>
+			<li>
+			A1: Alternatief voor stap 5
+				<ol>
+				<li> Rekeningnummer is onjuist. </li>
+				<li> Gebruiker krijgt foutmelding. </li>
+				<li> Ga naar stap 4 in Basic flow. </li>
+				</ol>
+			</li>
+			<li>
+			A2: Alternatief voor stap 7
+				<ol>
+				<li> Gebruikersnaam is al in gebruik</li>
+				<li> Gebruiker krijgt foutmelding</li>
+				<li> Ga naar stap 6 in Basic flow</li>
+				</ol>
+			</li>
+			</ul>
+		</li>
+		<li><b>Exceptions:</b> 
+				
+		</li>
 		</ul>
 </tr>
 <tr>
@@ -40,40 +68,109 @@
 </tr>
 <tr>
 	<td><strong>Preconditions:</td>
-	<td>Alle gebruikers van het platform moeten een account kunnen aanmaken. </td>
+	<td>De gebruiker is niet in staat om in te loggen en het platform te gebruiken </td>
 </tr>
 <tr>
 	<td><strong>Post conditions: </td>
-	<td>Alle gebruikers van het platform moeten door middel van hun account een rit kunnen aanvragen en accepteren, hun wallet kunnen opwaarderen, geld kunnen ontvangen en een waardering achter kunnen laten . </td>
+	<td>Een account aangemaakt voor een nieuwe gebruiker, die nu in staat is om in te loggen op de website. </td>
 </tr>
 <tr>
 	<td><strong>Notes/issues: </td>
-	<td>Het eerste wat app gebruikers moeten aangeven is hun spreektaal. Zo kan het verdere proces in deze taal worden uitgevoerd. </td>
+	<td> </td>
 </tr>
 </table>
  
+<h1>U2 - Inzien besparingsstatistieken</h1>
 
-
-
-<h1>Use Case #2</h1>
-
-<p> Use case name and identifier:  U2 - inzien statistieken besparing
-Objective: Voor de gebruikers van de service is het mogelijk om in de applicatie te zien hoeveel CO2-uitstoot en kosten zij hebben bespaard door de service te gebruiken
-Priority: Niet hoog
-Source: Client 
-Actors: Chauffeur en meerijder
-Flow of Events:
-Basic Flow – De gebruiker krijgt de juiste statistieken te zien wanneer hij/zij deze opvraagt in de applicatie
-Alternative Flow – De gebruiker krijgt statistieken te zien met onjuiste informatie
-Exceptions – De gebruiker krijgt de statistieken niet te zien bij aanvraag
-Includes (other use case IDs): -
-Extends (other use case IDs): -
-Generalizes (other use case IDs): -
-Preconditions: de gebruiker weet niet hoeveel hij/zij heeft bespaard op elk vlak met gebruik van de service
-Postconditions: de gebruiker weet nu hoeveel hij/zij heeft bespaard op elk vlak
-Notes/Issues: - </p>
+<table>
+<tr>
+	<td><strong> Use case name and identifier: </td>
+	<td>U2 - Inzien besparingsstatistieken </td>
+</tr>
+<tr>
+	<td><strong>Objective: </td>
+	<td>Voor de gebruikers van de service is het mogelijk om in de applicatie te zien hoeveel CO2-uitstoot en kosten zij hebben bespaard door de service te gebruiken. </td>
+</tr>
+<tr>
+	<td><strong> Priority: </td>
+	<td> 3</td>
+</tr>
+<tr>
+	<td><strong> Actors: </td>
+	<td>Chaufeur en meerijder </td>
+</tr>
+<tr>
+	<td><strong> Flow of events: </td>
+	<td>
+		<ul>
+		<li><b>Basic flow:</b> De gebruiker klikt in zijn/haar persoonlijke pagina op het kopje ‘statistieken inzien’. Op basis van de gemaakte ritten als zowel chauffeur als meerijder, zijn zowel besparing van kosten als de besparing van uitstoot van CO2 berekend. De gebruiker krijgt deze gegevens in statistiek vorm te zien. </li>
+		<li><b>Alternative flow:</b> </li>
+		<li><b>Exceptions:</b>De gebruiker krijgt statistieken te zien met onjuiste informatie. </li>
+		</ul>
+</tr>
+<tr>
+	<td><strong>Includes: </td>
+	<td> </td>
+</tr>
+<tr>
+	<td><strong>Preconditions:</td>
+	<td> </td>
+</tr>
+<tr>
+	<td><strong>Post conditions: </td>
+	<td> </td>
+</tr>
+<tr>
+	<td><strong>Notes/issues: </td>
+	<td> </td>
+</tr>
+</table>
 
 <h1>Use Case #3</h1>
+
+<table>
+<tr>
+	<td><strong> Use case name and identifier: </td>
+	<td>U2 - Inzien besparingsstatistieken </td>
+</tr>
+<tr>
+	<td><strong>Objective: </td>
+	<td>Voor de gebruikers van de service is het mogelijk om in de applicatie te zien hoeveel CO2-uitstoot en kosten zij hebben bespaard door de service te gebruiken. </td>
+</tr>
+<tr>
+	<td><strong> Priority: </td>
+	<td>3 </td>
+</tr>
+<tr>
+	<td><strong> Actors: </td>
+	<td> </td>
+</tr>
+<tr>
+	<td><strong> Flow of events: </td>
+	<td>
+		<ul>
+		<li><b>Basic flow:</b>  </li>
+		<li><b>Alternative flow:</b> </li>
+		<li><b>Exceptions:</b> </li>
+		</ul>
+</tr>
+<tr>
+	<td><strong>Includes: </td>
+	<td> </td>
+</tr>
+<tr>
+	<td><strong>Preconditions:</td>
+	<td> </td>
+</tr>
+<tr>
+	<td><strong>Post conditions: </td>
+	<td> </td>
+</tr>
+<tr>
+	<td><strong>Notes/issues: </td>
+	<td> </td>
+</tr>
+</table>
 
 <p>Use case name and identifier:  U3 - Ritaanvraag doen
 Objective: De gebruiker doet een ritaanvraag aan de chauffeur om van A naar B mee te rijden
@@ -92,6 +189,54 @@ Postconditions: Een correct verstuurde ritaanvraag
 Notes/Issues: </p>
 
 <h1>Use Case #4</h1>
+
+<table>
+<tr>
+	<td><strong> Use case name and identifier: </td>
+	<td>U2 - Inzien besparingsstatistieken </td>
+</tr>
+<tr>
+	<td><strong>Objective: </td>
+	<td> </td>
+</tr>
+<tr>
+	<td><strong> Priority: </td>
+	<td> </td>
+</tr>
+<tr>
+	<td><strong> Source: </td>
+	<td> </td>
+</tr>
+<tr>
+	<td><strong> Actors: </td>
+	<td> </td>
+</tr>
+<tr>
+	<td><strong> Flow of events: </td>
+	<td>
+		<ul>
+		<li><b>Basic flow:</b>  </li>
+		<li><b>Alternative flow:</b> </li>
+		<li><b>Exceptions:</b> </li>
+		</ul>
+</tr>
+<tr>
+	<td><strong>Includes: </td>
+	<td> </td>
+</tr>
+<tr>
+	<td><strong>Preconditions:</td>
+	<td> </td>
+</tr>
+<tr>
+	<td><strong>Post conditions: </td>
+	<td> </td>
+</tr>
+<tr>
+	<td><strong>Notes/issues: </td>
+	<td> </td>
+</tr>
+</table>
 
 <p>Use case name and identifier:  U4 - Ritaanvraag accepteren
 Objective: De chauffeur kan de verstuurde ritaanvraag van de meerijder accepteren zodat een afspraak wordt gemaakt voor de rit
