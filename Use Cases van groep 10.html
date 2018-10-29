@@ -11,7 +11,7 @@
 </tr>
 <tr>
 	<td><strong>Objective: </td>
-	<td>Een account aanmaken, zodat  </td>
+	<td>Een account aanmaken, zodat   </td>
 </tr>
 <tr>
 	<td><strong> Priority: </td>
@@ -34,6 +34,7 @@
 			<li>Systeem valideert rekeningnummer</li>
 			<li>Gebruiker maakt een gebruikersnaam en wachtwoord aan. </li>
 			<li>Systeem controleert gebruikersnaam en wachtwoord </li>
+			<li>Gebruiker vinkt aan dat ze akkoord gaan met de 'Terms of Service' en een account willen aanmaken.</li>
 			<li>Systeem maakt een account aan en verbindt de ingevulde gegevens met de gebruikersnaam en wachtwoord. </li>
 			</ol>
 		</li>
@@ -58,13 +59,21 @@
 			</ul>
 		</li>
 		<li><b>Exceptions:</b> 
-				
+			<ul>
+			<li>
+			E1: Exception voor stap 9 als gebruiker niet akkoord gaat met de Terms of Service.
+				<ol>
+				<li> Gebruiker kan geen account aanmaken. </li>
+				<li> [fault] </li>
+				</ol>
+			
+			</ul>
 		</li>
 		</ul>
 </tr>
 <tr>
 	<td><strong>Includes: </td>
-	<td>Niet relevant </td>
+	<td> </td>
 </tr>
 <tr>
 	<td><strong>Preconditions:</td>
@@ -103,22 +112,55 @@
 	<td><strong> Flow of events: </td>
 	<td>
 		<ul>
-		<li><b>Basic flow:</b> De gebruiker klikt in zijn/haar persoonlijke pagina op het kopje ‘statistieken inzien’. Op basis van de gemaakte ritten als zowel chauffeur als meerijder, zijn zowel besparing van kosten als de besparing van uitstoot van CO2 berekend. De gebruiker krijgt deze gegevens in statistiek vorm te zien. </li>
-		<li><b>Alternative flow:</b> </li>
-		<li><b>Exceptions:</b>De gebruiker krijgt statistieken te zien met onjuiste informatie. </li>
+		<li><b>Basic flow:</b>
+			<ol>
+			<li>Gebruiker logt in. </li>
+			<li>Gebruiker drukt op inzien besparingen.</li> 
+			<li>Systeem vraagt de ritgegevens op van de ingelogde gebruiker </li>
+			<li>Systeem berekent de bespaarde CO2-uitstoot en kosten.</li>
+			<li>Systeem laat statistieken zien aan de gebruiker.</li>
+			</ol>
+		</li>
+		<li><b>Alternative flow:</b> 
+			<ul>
+			<li>
+			A1: Alternatief voor stap 1
+				<ol>
+				<li> Inlog gegevens onjuist. </li>
+				<li> Gebruiker krijgt foutmelding. </li>
+				<li> Voer stap 1 opnieuw uit in Basic flow. </li>
+				</ol>
+			</li>
+			
+			</ul>
+		</li>
+		<li><b>Exceptions:</b> 
+			<ul>
+			<li>
+			E1: Exception voor stap 4
+				<ol>
+				<li> Systeem heeft geen ritgegevens beschikbaar </li>
+				<li> Gebruiker krijgt "start nu met besparen" bericht. </li>
+				<li> Redirect naar rit aanvraag pagina. </li>
+				</ol>
+			</li>
+			</ul>
+			
+			</ul>
+		</li>
 		</ul>
 </tr>
 <tr>
 	<td><strong>Includes: </td>
-	<td> </td>
+	<td>(inloggen) </td>
 </tr>
 <tr>
 	<td><strong>Preconditions:</td>
-	<td> </td>
+	<td>Gebruiker heeft een account. </td>
 </tr>
 <tr>
 	<td><strong>Post conditions: </td>
-	<td> </td>
+	<td>Gebruiker weet zijn besparingsstatistieken. </td>
 </tr>
 <tr>
 	<td><strong>Notes/issues: </td>
@@ -126,32 +168,68 @@
 </tr>
 </table>
 
-<h1>Use Case #3</h1>
+<h1>U3 - Ritaanvraag doen</h1>
 
 <table>
 <tr>
 	<td><strong> Use case name and identifier: </td>
-	<td>U2 - Inzien besparingsstatistieken </td>
+	<td>U3 - Ritaanvraag doen </td>
 </tr>
 <tr>
 	<td><strong>Objective: </td>
-	<td>Voor de gebruikers van de service is het mogelijk om in de applicatie te zien hoeveel CO2-uitstoot en kosten zij hebben bespaard door de service te gebruiken. </td>
+	<td>De gebruiker kan een aanvraag doen om van A naar B mee te rijden met een chaufeur. </td>
 </tr>
 <tr>
 	<td><strong> Priority: </td>
-	<td>3 </td>
+	<td>1 </td>
 </tr>
 <tr>
 	<td><strong> Actors: </td>
-	<td> </td>
+	<td>Meerijders </td>
 </tr>
 <tr>
 	<td><strong> Flow of events: </td>
 	<td>
 		<ul>
-		<li><b>Basic flow:</b>  </li>
-		<li><b>Alternative flow:</b> </li>
-		<li><b>Exceptions:</b> </li>
+		<li><b>Basic flow:</b>
+			<ol>
+			<li>Gebruiker vult een vertrek en aankomstlocatie en vertrek- of aankomsttijd in op de homepagina </li> 
+			<li>Systeem bepaald route.  </li>
+			<li>Systeem zoek chaufeurs op de route.</li>
+			<li>Systeem haalt de gegevens van de gevonden chaufeurs op. </li>
+			<li>Systeem schat voor elke chaufeur de benzinekosten en CO2-uitstoot gebaseerd op de afstand en type auto. </li>
+			<li>Gebruiker krijgt een paar chaufeurs voorgeschoteld met ranking, geschatte kosten en CO2-uitstoot. </li>
+			<li>Gebruiker vraagt een rit aan bij een van de chaufeurs. </li>
+			<li>Systeem stuurt ritaanvraag naar de chaufeur. </li>
+			</ol>
+		</li>
+		<li><b>Alternative flow:</b> 
+			<ul>
+			<li>
+			A1: Alternatief voor stap 1
+				<ol>
+				<li> Inlog gegevens onjuist. </li>
+				<li> Gebruiker krijgt foutmelding. </li>
+				<li> Voer stap 1 opnieuw uit in Basic flow. </li>
+				</ol>
+			</li>
+			
+			</ul>
+		</li>
+		<li><b>Exceptions:</b> 
+			<ul>
+			<li>
+			E1: Exception voor stap 4
+				<ol>
+				<li> Systeem heeft geen ritgegevens beschikbaar </li>
+				<li> Gebruiker krijgt "start nu met besparen" bericht. </li>
+				<li> Redirect naar rit aanvraag pagina. </li>
+				</ol>
+			</li>
+			</ul>
+			
+			</ul>
+		</li>
 		</ul>
 </tr>
 <tr>
@@ -160,7 +238,7 @@
 </tr>
 <tr>
 	<td><strong>Preconditions:</td>
-	<td> </td>
+	<td>Gebruiker is ingelogd en op de homepagina</td>
 </tr>
 <tr>
 	<td><strong>Post conditions: </td>
