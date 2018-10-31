@@ -2,78 +2,411 @@
 <html>
 <body>
 
-<h1>Use Case #1</h1>
+<h1>U1 - Account aanmaken</h1>
 
-<p>Use case name and identifier: U1 - Account aanmaken 
-Objective: De volgende persoonsgegevens invoeren: auto, faculteit, leeftijd, geslacht, voorwaarden medepassagiers
-Priority: Belangrijk
-Source: Vanuit het de basis benodigdheden voor het systeem 
-Actors: alle gebruikers (chauffeurs en passagiers)
-Flow of events:
-Basic Flow - Een student of medewerker beslist dat hij/zij gebruik wilt maken van de app. Hij/zij moet dan beginnen met het aanmaken van een account, waarin verschillende gegevens moeten worden ingevoerd en de wallet moet worden aangemaakt. Vervolgens kan er gebruik gemaakt worden van de app.
-Alternative Flow - De gebruiker vult iets verkeerd in/ vergeet iets in te vullen en kan zijn account niet voltooiien. Na nog een keer invoeren, gaat het wel goed. 
-Exceptions - De app heeft een storing en de gebruiker kan tijdelijk geen account aanmaken. 
+<table>
+<tr>
+	<td><strong> Use case name and identifier: </td>
+	<td>U1 - Account aanmaken </td>
+</tr>
+<tr>
+	<td><strong>Objective: </td>
+	<td>Een account aanmaken, zodat   </td>
+</tr>
+<tr>
+	<td><strong> Priority: </td>
+	<td>1 </td>
+</tr>
+<tr>
+	<td><strong> Actors: </td>
+	<td>Chaufeurs en meerijder </td>
+</tr>
+<tr>
+	<td><strong> Flow of events: </td>
+	<td>
+		<ul>
+		<li><b>Basic flow:</b>
+			<ol>
+			<li>Gebruiker klikt op de 'Aanmeld'knop. </li>
+			<li>Gebruiker vult in of hij voornamelijk meerijder of chaufeur is.</li> 
+			<li>Gebruiker vult naam en (e-mail) adresgegevens in. </li>
+			<li>Gebruiker vult rekeningnummer, leeftijd, geslacht, faculteit en (optioneel) auto in.</li>
+			<li>Systeem valideert rekeningnummer</li>
+			<li>Gebruiker maakt een gebruikersnaam en wachtwoord aan. </li>
+			<li>Systeem controleert gebruikersnaam en wachtwoord </li>
+			<li>Gebruiker vinkt aan dat ze akkoord gaan met de 'Terms of Service' en een account willen aanmaken.</li>
+			<li>Systeem maakt een account aan en verbindt de ingevulde gegevens met de gebruikersnaam en wachtwoord. </li>
+			</ol>
+		</li>
+		<li><b>Alternative flow:</b> 
+			<ul>
+			<li>
+			A1: Alternatief voor stap 5
+				<ol>
+				<li> Rekeningnummer is onjuist. </li>
+				<li> Gebruiker krijgt foutmelding. </li>
+				<li> Ga naar stap 4 in Basic flow. </li>
+				</ol>
+			</li>
+			<li>
+			A2: Alternatief voor stap 7
+				<ol>
+				<li> Gebruikersnaam is al in gebruik</li>
+				<li> Gebruiker krijgt foutmelding</li>
+				<li> Ga naar stap 6 in Basic flow</li>
+				</ol>
+			</li>
+			</ul>
+		</li>
+		<li><b>Exceptions:</b> 
+			<ul>
+			<li>
+			E1: Exception voor stap 9 als gebruiker niet akkoord gaat met de Terms of Service.
+				<ol>
+				<li> Gebruiker kan geen account aanmaken. </li>
+				<li> [fault] </li>
+				</ol>
+			
+			</ul>
+		</li>
+		</ul>
+</tr>
+<tr>
+	<td><strong>Includes: </td>
+	<td> </td>
+</tr>
+<tr>
+	<td><strong>Preconditions:</td>
+	<td>De gebruiker is niet in staat om in te loggen en het platform te gebruiken </td>
+</tr>
+<tr>
+	<td><strong>Post conditions: </td>
+	<td>Een account aangemaakt voor een nieuwe gebruiker, die nu in staat is om in te loggen op de website. </td>
+</tr>
+<tr>
+	<td><strong>Notes/issues: </td>
+	<td> </td>
+</tr>
+</table>
+ 
+<h1>U2 - Inzien besparingsstatistieken</h1>
 
-Includes: niet relevant
-Preconditions: alle gebruikers van het platform moeten een account kunnen aanmaken.
-Post conditions: alle gebruikers van het platform moeten door middel van hun account een rit kunnen aanvragen en accepteren, hun wallet kunnen opwaarderen, geld kunnen ontvangen en een waardering achter kunnen laten . 
-Notes/issues: Het eerste wat app gebruikers moeten aangeven is hun spreektaal. Zo kan het verdere proces in deze taal worden uitgevoerd.</p>
+<table>
+<tr>
+	<td><strong> Use case name and identifier: </td>
+	<td>U2 - Inzien besparingsstatistieken </td>
+</tr>
+<tr>
+	<td><strong>Objective: </td>
+	<td>Voor de gebruikers van de service is het mogelijk om in de applicatie te zien hoeveel CO2-uitstoot en kosten zij hebben bespaard door de service te gebruiken. </td>
+</tr>
+<tr>
+	<td><strong> Priority: </td>
+	<td> 3</td>
+</tr>
+<tr>
+	<td><strong> Actors: </td>
+	<td>Chaufeur en meerijder </td>
+</tr>
+<tr>
+	<td><strong> Flow of events: </td>
+	<td>
+		<ul>
+		<li><b>Basic flow:</b>
+			<ol>
+			<li>Gebruiker logt in. </li>
+			<li>Gebruiker drukt op 'inzien besparingen'.</li> 
+			<li>Systeem vraagt de ritgegevens op van de ingelogde gebruiker </li>
+			<li>Systeem berekent de bespaarde CO2-uitstoot en kosten.</li>
+			<li>Systeem laat statistieken zien aan de gebruiker.</li>
+			</ol>
+		</li>
+		<li><b>Alternative flow:</b> 
+			<ul>
+			<li>
+			A1: Alternatief voor stap 1
+				<ol>
+				<li> Inlog gegevens onjuist. </li>
+				<li> Gebruiker krijgt foutmelding. </li>
+				<li> Voer stap 1 opnieuw uit in Basic flow. </li>
+				</ol>
+			</li>
+			
+			</ul>
+		</li>
+		<li><b>Exceptions:</b> 
+			<ul>
+			<li>
+			E1: Exception voor stap 4
+				<ol>
+				<li> Systeem heeft geen ritgegevens beschikbaar </li>
+				<li> Gebruiker krijgt "start nu met besparen" bericht. </li>
+				<li> Redirect naar rit aanvraag pagina. </li>
+				</ol>
+			</li>
+			</ul>
+			
+			</ul>
+		</li>
+		</ul>
+</tr>
+<tr>
+	<td><strong>Includes: </td>
+	<td>(inloggen) </td>
+</tr>
+<tr>
+	<td><strong>Preconditions:</td>
+	<td>Gebruiker heeft een account. </td>
+</tr>
+<tr>
+	<td><strong>Post conditions: </td>
+	<td>Gebruiker weet zijn besparingsstatistieken. </td>
+</tr>
+<tr>
+	<td><strong>Notes/issues: </td>
+	<td> </td>
+</tr>
+</table>
 
-<h1>Use Case #2</h1>
+<h1>U3 - Ritaanvraag doen</h1>
 
-<p> Use case name and identifier:  U2 - inzien statistieken besparing
-Objective: Voor de gebruikers van de service is het mogelijk om in de applicatie te zien hoeveel CO2-uitstoot en kosten zij hebben bespaard door de service te gebruiken
-Priority: Niet hoog
-Source: Client 
-Actors: Chauffeur en meerijder
-Flow of Events:
-Basic Flow – De gebruiker krijgt de juiste statistieken te zien wanneer hij/zij deze opvraagt in de applicatie
-Alternative Flow – De gebruiker krijgt statistieken te zien met onjuiste informatie
-Exceptions – De gebruiker krijgt de statistieken niet te zien bij aanvraag
-Includes (other use case IDs): -
-Extends (other use case IDs): -
-Generalizes (other use case IDs): -
-Preconditions: de gebruiker weet niet hoeveel hij/zij heeft bespaard op elk vlak met gebruik van de service
-Postconditions: de gebruiker weet nu hoeveel hij/zij heeft bespaard op elk vlak
-Notes/Issues: - </p>
+<table>
+<tr>
+	<td><strong> Use case name and identifier: </td>
+	<td>U3 - Ritaanvraag doen </td>
+</tr>
+<tr>
+	<td><strong>Objective: </td>
+	<td>De gebruiker kan een aanvraag doen om van A naar B mee te rijden met een chaufeur. </td>
+</tr>
+<tr>
+	<td><strong> Priority: </td>
+	<td>1 </td>
+</tr>
+<tr>
+	<td><strong> Actors: </td>
+	<td>Meerijders </td>
+</tr>
+<tr>
+	<td><strong> Flow of events: </td>
+	<td>
+		<ul>
+		<li><b>Basic flow:</b>
+			<ol>
+			<li>Gebruiker vult een vertrek en aankomstlocatie en vertrek- of aankomsttijd in op de homepagina </li> 
+			<li>Systeem bepaald route.  </li>
+			<li>Systeem zoek chaufeurs op de route.</li>
+			<li>Systeem haalt de gegevens van de gevonden chaufeurs op. </li>
+			<li>Systeem schat voor elke chaufeur de benzinekosten en CO2-uitstoot gebaseerd op de afstand en type auto. </li>
+			<li>Gebruiker krijgt een of meerdere chaufeurs voorgeschoteld met ranking, geschatte kosten en CO2-uitstoot. </li>
+			<li>Gebruiker vraagt een rit aan bij een van de chaufeurs. </li>
+			<li>Systeem stuurt ritaanvraag naar de chaufeur. </li>
+			</ol>
+		</li>
+		<li><b>Alternative flow:</b> 
+			<ul>
+			<li>
+			A1: Alternatief tussen stap 3 en 4
+				<ol>
+				<li> Systeem vindt geen chaufeur op de route. </li>
+				<li> Systeem slaat ritaanvraaggegevens op. </li>
+				<li> Systeem geeft melding 'nog geen chaufeur gevonden'. </li>
+				<li> Systeem vergelijkt ritaanvraaggegevens bij elke nieuwe aangeboden rit. </li>
+				<li> Systeem stuurt melding aan meerijder bij een gevonden chauffeur. </li>
+				<li> Ga door bij stap 4 </li>
+				</ol>
+			</li>
+			
+			</ul>
+		</li>
+		<li><b>Exceptions:</b> 
+			<ul>
+			<li>
+			E1: Exception voor A1; stap 5 als er geen chaufeur is gevonden 24 uur voor de aanvang van de rit
+				<ol>
+				<li> Systeem stuurt melding 'geen chaufeur gevonden' naar gebruiker </li>
+				<li> [failure]</li>
+				</ol>
+			</li>
+			</ul>
+			
+			</ul>
+		</li>
+		</ul>
+</tr>
+<tr>
+	<td><strong>Includes: </td>
+	<td> (ritaanbod doen)</td>
+</tr>
+<tr>
+	<td><strong>Preconditions:</td>
+	<td>Gebruiker is ingelogd en op de homepagina</td>
+</tr>
+<tr>
+	<td><strong>Post conditions: </td>
+	<td>Er is een ritverzoek gedaan van een meerijder naar een chaufeur. </td>
+</tr>
+<tr>
+	<td><strong>Notes/issues: </td>
+	<td> </td>
+</tr>
+</table>
 
-<h1>Use Case #3</h1>
 
-<p>Use case name and identifier:  U3 - Ritaanvraag doen
-Objective: De gebruiker doet een ritaanvraag aan de chauffeur om van A naar B mee te rijden
-Priority: Hoog
-Source: 
-Actors: Chauffeur en meerijder
-Flow of Events
-Basic Flow – De gebruiker stuurt aan een chauffeur in de buurt een ritaanvraag en de chauffeur ontvangt deze
-Alternative Flow – De aanvraag wordt niet correct verstuurd, de aanvraag wordt niet correct ontvangen, er zit een te lange vertraging in de aanvraag
-Exceptions – Niet versturen van aanvraag
-Includes (other use case IDs): thuisbestemming aangeven
-Extends (other use case IDs): -
-Generalizes (other use case IDs): -
-Preconditions: Geen ritaanvraag gedaan
-Postconditions: Een correct verstuurde ritaanvraag
-Notes/Issues: </p>
+<h1>U4 - Ritaanvraag beantwoorden</h1>
 
-<h1>Use Case #4</h1>
+<table>
+<tr>
+	<td><strong> Use case name and identifier: </td>
+	<td>U4 - ritaanvraag beantwoorden </td>
+</tr>
+<tr>
+	<td><strong>Objective: </td>
+	<td>De gebruiker krijgt een melding via de email of op de website van een mogelijke meerijder. De gebruiker kan dan deze aanvraag accepteren of weigeren. </td>
+</tr>
+<tr>
+	<td><strong> Priority: </td>
+	<td>1 </td>
+</tr>
+<tr>
+	<td><strong> Actors: </td>
+	<td>Chaufeurs </td>
+</tr>
+<tr>
+	<td><strong> Flow of events: </td>
+	<td>
+		<ul>
+		<li><b>Basic flow:</b>
+			<ol>
+			<li>Gebruiker krijgt een ritverzoek met tijd, locatie en de gegevens van de meerijder. </li> 
+			<li>Gebruiker accepteert het ritverzoek.  </li>
+			<li>Systeem voegt de rit toe aan het account van de gebruiker.</li>
+			<li>Systeem stuurt een 'verzoek geaccepteerd' bericht naar de meerijder. </li>
+			<li>Systeem opent een chat tussen chaufeur en meerijder. </li>
+			</ol>
+		</li>
+		<li><b>Alternative flow:</b> 
+			
+		</li>
+		<li><b>Exceptions:</b> 
+			<ul>
+			<li>
+			E1: Exception voor stap 2 als de chaufeur de rit weigert
+				<ol>
+				<li> Systeem vraagt om reden voor de geweigerde rit. </li>
+				<li> Gebruiker geeft motivatie voor weigeren rit. </li>
+				<li> Systeem stuurt motivatie naar beheerder. </li>
+				<li> [failure]</li>
+				</ol>
+			</li>
+			</ul>
+			
+			</ul>
+		</li>
+		</ul>
+</tr>
+<tr>
+	<td><strong>Includes: </td>
+	<td>U3</td>
+</tr>
+<tr>
+	<td><strong>Preconditions:</td>
+	<td>Een meerijder heeft gekozen om mee te rijden met de gebruiker en een ritverzoek verstuurd.</td>
+</tr>
+<tr>
+	<td><strong>Post conditions: </td>
+	<td>Er staat een afspraak vast voor een rit en er is een chat geopend tussen de 2 gebruikers. </td>
+</tr>
+<tr>
+	<td><strong>Notes/issues: </td>
+	<td>De beheerder van het platform kan inzicht krijgen waarom ritten worden geweigerd. </td>
+</tr>
+</table>
 
-<p>Use case name and identifier:  U4 - Ritaanvraag accepteren
-Objective: De chauffeur kan de verstuurde ritaanvraag van de meerijder accepteren zodat een afspraak wordt gemaakt voor de rit
-Priority: Hoog
-Source: 
-Actors: Chauffeur en meerijder
-Flow of Events
-Basic Flow – De chauffeur accepteert / weigert de ritaanvraag van de gebruiker
-Alternative Flow – Het antwoord op de aanvraag komt niet correct door
-Exceptions – Niet versturen van acceptatie
-Includes (other use case IDs): thuisbestemming aangeven
-Extends (other use case IDs): -
-Generalizes (other use case IDs): -
-Preconditions: Geen ritaanvraag gedaan
-Postconditions: Een correct verstuurde ritaanvraag
-Notes/Issues: </p>
 
-<h1>Use Case #5</h1>
+<h1>U5 - Chatbericht sturen</h1>
+
+<table>
+<tr>
+	<td><strong> Use case name and identifier: </td>
+	<td>U5 - chatbericht sturen </td>
+</tr>
+<tr>
+	<td><strong>Objective: </td>
+	<td>De gebruiker kan een bericht sturen naar een andere gebruiker waarmee een chaufeur/meerijder match is gemaakt. </td>
+</tr>
+<tr>
+	<td><strong> Priority: </td>
+	<td>2 </td>
+</tr>
+<tr>
+	<td><strong> Actors: </td>
+	<td>Meerijders en chaufeurs </td>
+</tr>
+<tr>
+	<td><strong> Flow of events: </td>
+	<td>
+		<ul>
+		<li><b>Basic flow:</b>
+			<ol>
+			<li>Gebruiker vult een vertrek en aankomstlocatie en vertrek- of aankomsttijd in op de homepagina </li> 
+			<li>Systeem bepaald route.  </li>
+			<li>Systeem zoek chaufeurs op de route.</li>
+			<li>Systeem haalt de gegevens van de gevonden chaufeurs op. </li>
+			<li>Systeem schat voor elke chaufeur de benzinekosten en CO2-uitstoot gebaseerd op de afstand en type auto. </li>
+			<li>Gebruiker krijgt een of meerdere chaufeurs voorgeschoteld met ranking, geschatte kosten en CO2-uitstoot. </li>
+			<li>Gebruiker vraagt een rit aan bij een van de chaufeurs. </li>
+			<li>Systeem stuurt ritaanvraag naar de chaufeur. </li>
+			</ol>
+		</li>
+		<li><b>Alternative flow:</b> 
+			<ul>
+			<li>
+			A1: Alternatief tussen stap 3 en 4
+				<ol>
+				<li> Systeem vindt geen chaufeur op de route. </li>
+				<li> Systeem slaat ritaanvraaggegevens op. </li>
+				<li> Systeem geeft melding 'nog geen chaufeur gevonden'. </li>
+				<li> Systeem vergelijkt ritaanvraaggegevens bij elke nieuwe aangeboden rit. </li>
+				<li> Systeem stuurt melding aan meerijder bij een gevonden chauffeur. </li>
+				<li> Ga door bij stap 4 </li>
+				</ol>
+			</li>
+			
+			</ul>
+		</li>
+		<li><b>Exceptions:</b> 
+			<ul>
+			<li>
+			E1: Exception voor A1; stap 5 als er geen chaufeur is gevonden 24 uur voor de aanvang van de rit
+				<ol>
+				<li> Systeem stuurt melding 'geen chaufeur gevonden' naar gebruiker </li>
+				<li> [failure]</li>
+				</ol>
+			</li>
+			</ul>
+			
+			</ul>
+		</li>
+		</ul>
+</tr>
+<tr>
+	<td><strong>Includes: </td>
+	<td> (ritaanbod doen)</td>
+</tr>
+<tr>
+	<td><strong>Preconditions:</td>
+	<td>Gebruiker is ingelogd en op de homepagina</td>
+</tr>
+<tr>
+	<td><strong>Post conditions: </td>
+	<td>Er is een ritverzoek gedaan van een meerijder naar een chaufeur. </td>
+</tr>
+<tr>
+	<td><strong>Notes/issues: </td>
+	<td> </td>
+</tr>
+</table>
 
 <p>Use case name and identifier:  U5  - Chatbericht sturen
 Objective: De chauffeur en de meerijder hebben de mogelijkheid omcommuniceren over precieze tijd van aankomst, andere wensen en overige vragen. 
@@ -109,27 +442,84 @@ Preconditions: Een voltooide rit en opgeladen wallet
 Postconditions: Een betaalde chauffeur 
 Notes/Issues: - </p>
 
-<h1>Use Case #7</h1>
-
-<p>Use case name and identifier:  U7  - Rating invoeren 
-Objective: Na de voltooide en betaalde rit kan de meerijder de chauffeur beoordelen door middel van een sterren rating. Bij een laag aantal sterren wordt er ook de mogelijkheid geboden om een motivatie bij te voegen. 
-Priority: Niet heel hoog
-Source: Wensen client
-Actors: Meerijder
-Flow of Events
-Basic Flow – De meerijder vult de waardering voor de chauffeur in
-Alternative Flow – De meerijder vult een lage waardering voor de chauffeur in en wordt gevraag een motivatie bij te voegen. 
-Exceptions – De meerijder vult geen waardering in
-Includes: Motivatie rating geven 
-Extends: -
-Generalizes: -
-Preconditions: Een nog niet beoordeelde chauffeur
-Postconditions: Een geupdate rating van de chauffeur
-Notes/Issues: - </p>
-
-
-
-
+<h1>U7 - Rating invoeren</h1>
+<table>
+<tr>
+	<td><strong> Use case name and identifier: </td>
+	<td>U7 - Rating invoeren </td>
+</tr>
+<tr>
+	<td><strong>Objective: </td>
+	<td>De meerijder en chaufeur kunnen na een rit een beoordeling achterlaten in de vorm van een sterrenrating van 1 tot 5 </td>
+</tr>
+<tr>
+	<td><strong> Priority: </td>
+	<td>2 </td>
+</tr>
+<tr>
+	<td><strong> Actors: </td>
+	<td>Meerijders en chaufeurs </td>
+</tr>
+<tr>
+	<td><strong> Flow of events: </td>
+	<td>
+		<ul>
+		<li><b>Basic flow:</b>
+			<ol>
+			<li>Systeem vraagt om beoordeling.</li> 
+			<li>Gebruiker geeft een beoordeling van 1 t/m 5 sterren.  </li>
+			<li>Systeem geeft 'bedankt' melding.</li>
+			<li>Systeem berekend een nieuw gemiddelde rating. </li>
+			<li>Systeem voegt de berekende gemiddelde rating toe aan account. </li>
+			</ol>
+		</li>
+		<li><b>Alternative flow:</b> 
+			<ul>
+			<li>
+			A1: Alternatief tussen stap 2 en 3
+				<ol>
+				<li> Gebruiker geeft een rating van 1 of 2 sterren. </li>
+				<li> Systeem vraagt om een verklaring. </li>
+				<li> Gebruiker geeft een toelichting voor de lage score. </li>
+				<li> Systeem stuurt de veklaring door naar de beheerder. </li>
+				</ol>
+			</li>
+			
+			</ul>
+		</li>
+		<li><b>Exceptions:</b> 
+			<ul>
+			<li>
+			E1: Exception voor stap 4
+				<ol>
+				<li> Systeem heeft geen ritgegevens beschikbaar </li>
+				<li> Gebruiker krijgt "start nu met besparen" bericht. </li>
+				<li> Redirect naar rit aanvraag pagina. </li>
+				</ol>
+			</li>
+			</ul>
+			
+			</ul>
+		</li>
+		</ul>
+</tr>
+<tr>
+	<td><strong>Includes: </td>
+	<td> </td>
+</tr>
+<tr>
+	<td><strong>Preconditions:</td>
+	<td>Rit is uitgevoerd en de betalingen zijn doorgevoerd.</td>
+</tr>
+<tr>
+	<td><strong>Post conditions: </td>
+	<td>De sterrenrating van de meerijder en chaufeur in hun account zijn bijgewerkt. </td>
+</tr>
+<tr>
+	<td><strong>Notes/issues: </td>
+	<td>Een lage rating voor doorgestuurd naar de beheerder/client. Die kan dan beslissen na een of meerdere klachten actie te ondernemen. </td>
+</tr>
+</table>
 
 
 </body>
