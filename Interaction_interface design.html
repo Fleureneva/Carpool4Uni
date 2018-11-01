@@ -2,40 +2,98 @@
 
 <h2> Name: Login pagina </h2>
 <p> <b> Requirement: 10 </b> </p>
-<p> <b> Use case: U9 </b> </p>
+<p> <b> Use case: U8 </b> </p>
 
 <p> Op deze pagina moet de klant zijn gebruikersnaam en wachtwoord kunnen invoeren. Er moeten dus twee velden zijn: een voor de gebruikersnaam en een voor het wachtwoord. Bij het wachtwoord moet het woord verdoezeld worden, dit moet weergeven worden met zwarte puntjes. Er moet een inlogknop zijn die, wanneer deze wordt ingedrukt, de inlogprocedure initieert. </p> 
 <p> Als het inloggen is gelukt, wordt de klant doorgestuurd naar de homepage. Als het inloggen niet is gelukt, geeft het een foutbericht weer en wordt er teruggegaan naar de login pagina. De gebruiker moet op deze pagina de mogelijkheid krijgen om de website te bezoeken in het Engels of in het Nederland. Als de pagina in het Nederlands wordt weergeven, zal er een switch zijn naar de Engelse webpagina en vice versa. </p>
-<p> De gebruiker moet de mogelijkheid krijgen om zijn gebruikersnaam en wachtwoord te laten onthouden door de website. Er moet dus een selectievakje zijn om de gebruiker te onthouden: &lsquo;Keep me logged in/&lsquo;Houd mij ingelogd. </p>
-<p> Tot slot moet de gebruiker de mogelijkheid krijgen om zijn wachtwoord op te vragen als hij deze vergeten is (Forgot password/Wachtwoord vergeten), en de mogelijkheid om zich te registeren (&lsquo;New? Register here!/&lsquo;Nieuw? Registreer hier!). </p>
+<p> De gebruiker moet de mogelijkheid krijgen om zijn gebruikersnaam en wachtwoord te laten onthouden door de website. Er moet dus een selectievakje zijn om de gebruiker te onthouden: &lsquo;Keep me logged in&rsquo;/&lsquo;Houd mij ingelogd&rsquo;. </p>
+<p> Tot slot moet de gebruiker de mogelijkheid krijgen om zijn wachtwoord op te vragen als hij deze vergeten is (&lsquo;Forgot password&rsquo;/&lsquo;Wachtwoord vergeten&rsquo;), en de mogelijkheid om zich te registeren (&lsquo;New? Register here!&rsquo;/&lsquo;Nieuw? Registreer hier!&rsquo;). </p>
+
+<img src="Inloggen.PNG">
 
 <p> <b> SQL: </b> </p>
 <p> SELECT g.accountID, g.voornaam, g.achternaam </p>
 <p> FROM Gebruiker AS g </P>
-<p> WHERE g.Gebruikersnaam = &lsquo;invoer gebruikersnaam (php) </>
-<p> AND g.Wachtwoord = &lsquo;invoer wachtwoord (php) </p>
+<p> WHERE g.Gebruikersnaam = &lsquo;invoer gebruikersnaam&rsquo; (php) </>
+<p> AND g.Wachtwoord = &lsquo;invoer wachtwoord&rsquo; (php) </p>
 
-<img src="Inloggen.PNG">
+
 
 <h2> Name: Registratie </h2>
 <p> <b> Requirement: 6 </b> </p>
 <p> <b> Use case: U1 </b> </p>
 
-<p> Is de klant nieuw en wil deze een account aanmaken, dan drukt hij of zij op de inlogpagina op &lsquo;Nieuw? Registreer hier!. De klant wordt dan doorgestuurd naar de pagina waarop hij zich kan registreren. Bovenaan de pagina moet aangegeven worden dat het om een gebruikersregistratie gaat. In het registratieformulier moeten de volgende dingen kunnen worden ingevuld en aangegeven: gebruikersnaam, voornaam, achternaam, email, wachtwoord, bevestig wachtwoord, geslacht, leeftijd, in het bezit van en auto: ja/nee, verbonden faculteit, woonplaats, rekeningnummer en voorwaarden aan medepassagiers. </p>
+<p> Is de klant nieuw en wil deze een account aanmaken, dan drukt hij of zij op de inlogpagina op &lsquo;Nieuw? Registreer hier!&rsquo;. De klant wordt dan doorgestuurd naar de pagina waarop hij zich kan registreren. Bovenaan de pagina moet aangegeven worden dat het om een gebruikersregistratie gaat. In het registratieformulier moeten de volgende dingen kunnen worden ingevuld en aangegeven: gebruikersnaam, voornaam, achternaam, email, wachtwoord, bevestig wachtwoord, geslacht, leeftijd, in het bezit van en auto: ja/nee, verbonden faculteit, woonplaats, rekeningnummer en voorwaarden aan medepassagiers. </p>
 <p> Zeven van deze twaalf vakjes zijn verplicht om in te vullen en daarom moet achter deze specifieke vakken een sterretje staan waarmee dat wordt aangegeven. </p>
 <p> Onderaan de pagina moet er nog akkoord worden gegaan met de voorwaarden. Dit moet worden gedaan door een vierkant vakje aan te klikken. </p>
 <p> Tot slot is er de keus om door te gaan met registreren en om toch te annuleren. Registreren zal gebeuren met een lichtblauw vakje en annuleren met een wit vakje. </p>
 
-<p> <b> SQL: </b> </p>
-<p> <b> Algemene registratie: </b> </p>
-<p> INSERT INTO &lsquo;Gebruiker’ (&lsquo;Gebruikersnaam’, &lsquo;Voornaam’, &lsquo;Achternaam’, &lsquo;Email’, &lsquo;Wachtwoord’, &lsquo;Bevestig wachtwoord’, &lsquo;Geslacht’, &lsquo;Leeftijd’, &lsquo;In het bezit van een auto ja/nee’, &lsquo;Verbonden faculteit’, &lsquo;Woonplaats’, &lsquo;Rekeningnummer’, &lsquo;Voorwaarden aan medepassagiers’) </p>
-<p> VALUES(); </P>
-<p> <b> Meerijder registratie: </b> </P>
-<p> INSERT INTO &lsquo;Meerijder’ (&lsquo;id’, &lsquo;voorkeur_id’, &lsquo;faculteit’) </p>
-<p> VALUES(); </p>
-<p> <b> Chauffeur registratie: </b> </p>
-<p> INSERT INTO &lsquo;Chauffeur’ (&lsquo;id’, &lsquo;voorkeur_id’, &lsquo;auto_id’) </p>
-<p> VALUES(); </p>
-
 <img src="Gebruikersregistratie.JPG">
 
+<p> <b> SQL: </b> </p>
+<p> <b> Algemene registratie: </b> </p>
+<p> INSERT INTO &lsquo;Gebruiker&rsquo; (&lsquo;Gebruikersnaam&rsquo;, &lsquo;Voornaam&rsquo;, &lsquo;Achternaam&rsquo;, &lsquo;Email&rsquo;, &lsquo;Wachtwoord&rsquo;, &lsquo;Bevestig wachtwoord&rsquo;, &lsquo;Geslacht&rsquo;, &lsquo;Leeftijd&rsquo;, &lsquo;In het bezit van een auto ja/nee&rsquo;, &lsquo;Verbonden faculteit&rsquo;, &lsquo;Woonplaats&rsquo;, &lsquo;Rekeningnummer&rsquo;, &lsquo;Voorwaarden aan medepassagiers&rsquo;) </p>
+<p> VALUES(); </P>
+<p> <b> Meerijder registratie: </b> </P>
+<p> INSERT INTO &lsquo;Meerijder&rsquo; (&lsquo;id&rsquo;, &lsquo;voorkeur_id&rsquo;, &lsquo;faculteit&rsquo;) </p>
+<p> VALUES(); </p>
+<p> <b> Chauffeur registratie: </b> </p>
+<p> INSERT INTO &lsquo;Chauffeur&rsquo; (&lsquo;id&rsquo;, &lsquo;voorkeur_id&rsquo;, &lsquo;auto_id&rsquo;) </p>
+<p> VALUES(); </p>
+
+
+<h2> Name: Home pagina </h2>
+<p> <b> Requirement: 7 </b> </p>
+<p> <b> Use case: U2, U3 </b> </p>
+
+<p> Als je succesvol bent ingelogd, word je doorgestuurd naar de homepagina. Op deze pagina zal de routekaart worden weergegeven waarop het vertrekpunt en de eindbestemming zijn aangegeven. Dit vertrekpunt en deze eindbestemming kunnen worden ingevoerd aan de linkerkant van het scherm. Hieronder kunnen de gewenste datum en vertrektijd/aankomsttijd worden ingevoerd. Er kan gekozen worden voor een vertrektijd of een aankomsttijd. Dit is een optie dat wordt aangeduid met een knop: Vertrektijd|Aankomsttijd. </p>
+<p> In het midden van het scherm zal de kaart met de eindbestemming en het vertrekpunt worden weergeven. Deze twee punten worden door middel van een rode stip aangegeven. </p>
+<p> Rechts op de pagina zullen er snelkoppelingen zijn naar de wallet, het account, de chatberichten, de statistieken, en help. Rechtsonderin zal het logo van ons platform Carpool for Uni weergeven worden. </p>
+
+<img src="Homepagina.JPG">
+
+<p> <b> SQL: </b> </p>
+<p> <b> Als chauffeur: </b> </p>
+<p> INSERT INTO &lsquo;Rit&rsquo; (&lsquo;Rit_id&rsquo;, &lsquo;Account_id&rsquo;, &lsquo;Vertrekpunt&rsquo;, &lsquo;Eindbestemming&rsquo;, &lsquo;Datum&rsquo; &lsquo;Vertrektijd|Aankomsttijd&rsquo;) </p>
+<p> VALUES();  </p>
+<p> <b> Als meerijder: </b> </p>
+<p> INSERT INTO &lsquo;Rit&rsquo; (&lsquo;Account_id&rsquo;, &lsquo;Vertrekpunt&rsquo;, &lsquo;Eindbestemming&rsquo;, &lsquo;Datum&rsquo; &lsquo;Vertrektijd|Aankomsttijd&rsquo;) </p>
+<p> VALUES();  </p>
+
+
+<h2> Name: Chat tussen klant en chauffeur </h2>
+<p> <b> Requirement: 4 </b> </p>
+<p> <b> Use case: U5 </b> </p>
+
+<p> Op deze pagina moet de chat tussen de klant en de chauffeur beschikbaar zijn. Zij moeten de mogelijkheid hebben om met elkaar te communiceren. De berichten van de klant zullen weergeven worden in het paars en de berichten van de chauffeur in het donkergroen. De namen van zowel de klant als de gebruiker zullen bekend zijn. </p>
+<p> Bovenin het scherm moet de naam van de persoon met wie het gesprek wordt gevoerd duidelijk zichtbaar zijn. </p>
+<p> Zowel de klant als de chauffeur moet de mogelijkheid hebben om een nieuw gesprek te beginnen. Deze optie wordt rechtsonder weergegeven met behulp van een &lsquo;begin een nieuw gesprek&rsquo;-knop. </p>
+<p> Rechts in het scherm moet er de mogelijkheid zijn om te switchen naar een ander gesprek. De verschillende gebruikers worden onder elkaar weergeven en de naam van de persoon met wie er op dat moment een gesprek wordt gevoerd, wordt in het paars weergegeven. </p>
+
+<img src="chat pagina.PNG">
+
+<p> <b> SQL: </b> </p>
+<p> INSERT INTO &lsquo;Berichtendienst&rsquo; (&lsquo;berichten_id&rsquo;, &lsquo;communicatie_meerijder&rsquo;, &lsquo;communicatie_chauffeur&rsquo;) </p>
+<p> VALUES(); </p>
+
+
+
+<h2> Name: Ritverzoek accepteren/weigeren </h2>
+<p> <b> Requirement: 13 </b> </p>
+<p> <b> Use case: U3, U4, U9 </b> </p>
+
+<p> Er zijn twee manieren waarop een ritverzoek kan worden geweigerd of kan worden geaccepteerd. De eerste manier is als een pop-up. Er zal dan tijdens het gebruik van de applicatie of de website een schermpje oplicht dat het ritverzoek laat zien. De naam van de persoon van het ritverzoek moet groot weergeven worden aan de bovenkant van de pop-up. Er zal worden weergeven waar de klant vandaan komt en waar hij of zij naar toe wilt. De datum en de tijd waarop de klant dit wil zal ook worden weergeven. </p>
+<p> De chauffeur moet dan de mogelijkheid hebben om dit verzoek te accepteren of te weigeren. Beide opties zullen worden weergeven door een zwart omlijnde rechthoek. </p>
+<p> Onderaan de pop-up moet de optie tevoorschijn komen waarmee de chauffeur een chat kan starten met de klant. De chauffeur moet de mogelijkheid hebben om eerst met de klant te kunnen chatten voordat hij of zij deze klant weigert of accepteert. Wellicht wilt de chauffeur namelijk eerst duidelijk maken dat er niet gerookt mag worden in zijn auto bijvoorbeeld. </p>
+
+<img src="Ritverzoek.JPG">
+
+<p> De tweede manier waarop een verzoek bekend wordt, is door een email. Hierin zal dezelfde informatie staan als in de pop-up. Het enige verschil is echter dat er via de mail niet direct een keuze kan worden gemaakt tussen weigeren of accepteren. Hiervoor moet er eerst naar de website worden gegaan. Dat gebeurt door te klikken op de knop: &lsquo;Weigeren/accepteren?&rsquo; </p>
+
+<img src="e-mail.JPG">
+
+<p> <b> SQL: </b> </p>
+<p> SELECT g.account_id, g.voornaam, g.achternaam, g.woonplaats </p>
+<p> FROM chauffeur JOIN meerijder ON chauffeur_id = meerijder_id </p>
+<p> WHERE rit.beschikbaarheid >= 1 </p>
+<p> AND c.voorkeur_id = m.voorkeur_id </p>
