@@ -47,6 +47,36 @@
 </tr>
 </table>
 <h2> 3. System tests </h2>
+	<ol>
+	<li><b> Usability test:</b>
+	<p> Het doel is hier om de gebruiksvriendelijkheid van het systeem te testen. Het gebruiken van de app moet men snel en gemakkelijk kunnen leren. 
+Voor deze test is het belangrijk dat de tester vooral kijkt naar het eindproduct en vanuit het oogpunt van de gebruiker kijkt. De tester moet hier per methode nagaan of deze volgens de gebruikers gebruiksvriendelijk is. Elke stap die de gebruiker uitvoert moet niet onnodig veel tijd kosten. Dit houdt in dat vaak uitgevoerde stappen dus niet te veel doorverwijzingen moeten vereisen. De tester moet dus per stap testen of deze sneller moet worden uitgevoerd en hoe dat eventueel zou kunnen. Verder moet de tester nagaan hoe lang het duurt voordat een nieuwe gebruiker overweg kan met de app. Onderdeel van de usability test is de accessibility test. Deze test focust of de applicatie toegankelijk is voor mensen met bijvoorbeeld slecht zicht of gehoor. De tester kijkt hier naar dingen zoals het gebruikte lettertype, geluid van meldingen en kleurgebruik. 
+De benodigde data moet dus grotendeels van de gebruikers komen. Dit zou kunnen door een aantal gebruikers te vragen om een paar maanden na de implementatie van het systeem een formulier in te laten vullen. Ook kan de app via het platform (bijvoorbeeld de app store) waarop hij te downloaden is continu worden beoordeeld. Deze informatie moet worden opgevraagd. Ook zou de tester aan de benodigde data kunnen komen door zelfs als testpersoon te figureren, maar om deze test correct uit te voeren. De tester moet ook de data opvragen die duidelijk maakt welke functies van de app het meest gebruikt worden en hoeveel tijd het kost om deze uit te voeren. 
+	<p></li>
+	<li> <b>Secrurity test:</b>
+	<p> Het doel van deze test is de veiligheid van het systeem testen. We testen verschillende onderdelen die er samen voor zorgen dat de veiligheid van de applicatie wordt gewaarborgd.
+De tester moet de onderstaande onderdelen apart testen:
+Er moet worden getest of de vertrouwelijkheid van het systeem voldoende is. De tester gaat hier als ongeautoriseerde partijen toegang proberen te krijgen tot gevoelige informatie zoals de persoonsgegevens. Ook gaat de tester achterhalen of de informatie die wordt verschaft niet zomaar door iemand van buiten het systeem aangepast kan worden, waardoor wordt bevestigd of deze informatie dus betrouwbaar en het systeem integer is. Verder wordt er nagegaan of de gebruikers de correcte autorisatie bezitten. Hierbij test de tester of hij de informatie verkrijgt of een bepaalde actie uit mag voeren die niet bij zijn niveau van autorisatie hoort. Als laatst gaat de tester na of authenticiteit aan de eisen voldoet. Hij gaat hier bijvoorbeeld de identiteit van gebruikers verifiëren.
+</p>
+	</li>
+	<li> <b>Performance test:</b>
+	<p>Met deze test wordt vastgesteld hoe het systeem opereert en reageert onder een bepaalde werkdruk. Er wordt gekeken naar de responsiviteit, stabiliteit en betrouwbaarheid van de applicatie. 
+Hier wordt requirement 3 getest, waarbij de eis wordt gesteld dat het systeem uitbreidbaar moet zijn. Ook wordt requirement 2 getest, die stelt dat de responsetijd van een pagina maximaal 2 seconden mag zijn.
+Bij de performance test voeren we onder andere load testing uit. Hierbij moet de tester een groot aantal virtuele gebruikers gebruiken om een realistisch gebruik te simuleren. Er worden zogenoemde ‘bottlenecks’ opgespoord. Dit zijn kritieke punten in het systeem die het proces vertragen. Load testing komt ook overeen met de scalability test, die test of het systeem kan worden uitgebreid zonder capaciteits- of dataverlies. Stress testing is ook een onderdeel van de performance test. Logischerwijs wordt hier gekeken of het systeem een grote piek in de actieve gebruikers aan kan. De tester moet hier dus niet alleen simuleren dat er een groot aantal virtuele gebruikers is, maar ook dat deze allemaal tegelijk actief worden. Vervolgens wordt de endurance test uitgevoerd. Bij deze test staat het geheugen van het systeem centraal. De tester observeert dit langdurig om te kijken of de applicatie de belasting van het processing langere tijd aankan. Ook hier wordt dus gebruik gesimuleerd, maar deze keer ligt de focus op de tijd die verstrijkt. Als laatste voeren we de spike test uit. De spike test lijkt op de stress test, maar focust ook nog op het aantal gebruikers en de moeilijkheidsgraad van de uitgevoerde acties. De tester moet hier dus niet alleen virtuele gebruikers creëren, maar deze gebruikers ook specifieke acties uit laten voeren. 
+De data die hiervoor nodig is, zijn statistieken over het gebruik van de app. Het is belangrijk om te weten hoeveel gebruikers de app aankan en hoeveel gebruikers er worden verwacht, hoe lang pieken in de activiteit gemiddeld duren, wat voor functies vaak worden aangeroepen, etc. 
+</p>
+	</li>
+	<li> <b>Recovery test:</b>
+	<p> Bij deze test wordt gekeken of het systeem na een error de juiste oplossing kiest. Er wordt gekeken of het systeem schadeloos van een eventuele crash kan herstellen
+De taak van de tester is het veroorzaken van een geforceerde crash, waarna gecheckt kan worden of deze crash efficiënt en volledig wordt opgelost. De tester kan het hele systeem in een keer laten crashen of bepaalde delen van de software waarvan hij denk dat ze zwak zijn. Het is belangrijk om goed te kijken naar de backup systemen. Deze systemen en hun werking zijn belangrijke data voor het uitvoeren van deze test. 
+</p>
+	</li>
+	<li> <b>Browser compatibility test </b>
+	<p> Deze laatste test is bedoeld om te kijken of de software van de web applicatie nog steeds goed loopt op verschillende browser en operating systems. Ook wordt er gekeken of de software op alle versies van de verschillende systemen kan werken.
+De tester moet er voor zorgen dat er zoveel mogelijk browser worden gebruikt in deze test. Dit kan tegenwoordig gemakkelijk met bepaalde tools die op het internet zijn te vinden. Hij zou ook data op kunnen vragen waarin staat welke browsers het meest gebruikt worden, zodat alleen deze getest kunnen worden. Dit scheelt veel tijd. Verder moet de tester ook de verschillende versies van deze browsers nagaan. Als de applicatie werkt op een andere browser is het belangrijk om ook te checken of de applicatie dan wel hetzelfde werkt. 
+</p>
+	</li>
+	</ol>
 <h2> 4. Acceptence tests </h2>
 <p> Voor de acceptance test hebben we overleg gehad met onze klant. We hebben samen met hen de volgende vragen opgesteld die we aan de gebruikers van de applicatie zouden willen voorleggen: </p>
 <ul style= "list-style-type:square">
