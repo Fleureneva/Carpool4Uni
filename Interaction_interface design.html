@@ -6,13 +6,36 @@
 
 <p> Op deze pagina moet de klant zijn gebruikersnaam en wachtwoord kunnen invoeren. Er moeten dus twee velden zijn: een voor de gebruikersnaam en een voor het wachtwoord. Bij het wachtwoord moet het woord verdoezeld worden, dit moet weergeven worden met zwarte puntjes. Er moet een inlogknop zijn die, wanneer deze wordt ingedrukt, de inlogprocedure initieert. </p> 
 <p> Als het inloggen is gelukt, wordt de klant doorgestuurd naar de homepage. Als het inloggen niet is gelukt, geeft het een foutbericht weer en wordt er teruggegaan naar de login pagina. De gebruiker moet op deze pagina de mogelijkheid krijgen om de website te bezoeken in het Engels of in het Nederland. Als de pagina in het Nederlands wordt weergeven, zal er een switch zijn naar de Engelse webpagina en vice versa. </p>
-<p> De gebruiker moet de mogelijkheid krijgen om zijn gebruikersnaam en wachtwoord te laten onthouden door de website. Er moet dus een selectievakje zijn om de gebruiker te onthouden: Keep me logged in/Houd mij ingelogd. </p>
-<p> Tot slot moet de gebruiker de mogelijkheid krijgen om zijn wachtwoord op te vragen als hij deze vergeten is (Forgot password/Wachtwoord vergeten), en de mogelijkheid om zich te registeren (New? Register here!/Nieuw? Registreer hier!). </p>
+<p> De gebruiker moet de mogelijkheid krijgen om zijn gebruikersnaam en wachtwoord te laten onthouden door de website. Er moet dus een selectievakje zijn om de gebruiker te onthouden: &lsquo;Keep me logged in/&lsquo;Houd mij ingelogd. </p>
+<p> Tot slot moet de gebruiker de mogelijkheid krijgen om zijn wachtwoord op te vragen als hij deze vergeten is (Forgot password/Wachtwoord vergeten), en de mogelijkheid om zich te registeren (&lsquo;New? Register here!/&lsquo;Nieuw? Registreer hier!). </p>
 
 <p> <b> SQL: </b> </p>
 <p> SELECT g.accountID, g.voornaam, g.achternaam </p>
 <p> FROM Gebruiker AS g </P>
-<p> WHERE g.Gebruikersnaam = invoer gebruikersnaam (php) </>
-<p> AND g.Wachtwoord = invoer wachtwoord (php) </p>
+<p> WHERE g.Gebruikersnaam = &lsquo;invoer gebruikersnaam (php) </>
+<p> AND g.Wachtwoord = &lsquo;invoer wachtwoord (php) </p>
 
 <img src="Inloggen.PNG">
+
+<h2> Name: Registratie </h2>
+<p> <b> Requirement: 6 </b> </p>
+<p> <b> Use case: U1 </b> </p>
+
+<p> Is de klant nieuw en wil deze een account aanmaken, dan drukt hij of zij op de inlogpagina op &lsquo;Nieuw? Registreer hier!. De klant wordt dan doorgestuurd naar de pagina waarop hij zich kan registreren. Bovenaan de pagina moet aangegeven worden dat het om een gebruikersregistratie gaat. In het registratieformulier moeten de volgende dingen kunnen worden ingevuld en aangegeven: gebruikersnaam, voornaam, achternaam, email, wachtwoord, bevestig wachtwoord, geslacht, leeftijd, in het bezit van en auto: ja/nee, verbonden faculteit, woonplaats, rekeningnummer en voorwaarden aan medepassagiers. </p>
+<p> Zeven van deze twaalf vakjes zijn verplicht om in te vullen en daarom moet achter deze specifieke vakken een sterretje staan waarmee dat wordt aangegeven. </p>
+<p> Onderaan de pagina moet er nog akkoord worden gegaan met de voorwaarden. Dit moet worden gedaan door een vierkant vakje aan te klikken. </p>
+<p> Tot slot is er de keus om door te gaan met registreren en om toch te annuleren. Registreren zal gebeuren met een lichtblauw vakje en annuleren met een wit vakje. </p>
+
+<p> <b> SQL: </b> </p>
+<p> <b> Algemene registratie: </b> </p>
+<p> INSERT INTO &lsquo;Gebruiker’ (&lsquo;Gebruikersnaam’, &lsquo;Voornaam’, &lsquo;Achternaam’, &lsquo;Email’, &lsquo;Wachtwoord’, &lsquo;Bevestig wachtwoord’, &lsquo;Geslacht’, &lsquo;Leeftijd’, &lsquo;In het bezit van een auto ja/nee’, &lsquo;Verbonden faculteit’, &lsquo;Woonplaats’, &lsquo;Rekeningnummer’, &lsquo;Voorwaarden aan medepassagiers’) </p>
+<p> VALUES(); </P>
+<p> <b> Meerijder registratie: </b> </P>
+<p> INSERT INTO &lsquo;Meerijder’ (&lsquo;id’, &lsquo;voorkeur_id’, &lsquo;faculteit’) </p>
+<p> VALUES(); </p>
+<p> <b> Chauffeur registratie: </b> </p>
+<p> INSERT INTO &lsquo;Chauffeur’ (&lsquo;id’, &lsquo;voorkeur_id’, &lsquo;auto_id’) </p>
+<p> VALUES(); </p>
+
+<img src="Gebruikersregistratie.JPG">
+
