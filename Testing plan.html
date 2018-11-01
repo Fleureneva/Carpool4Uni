@@ -1,1 +1,54 @@
-<h1> Testing plan <h1>
+<h1> Testing plan </h1>
+<h2> 1. Unit tests </h2>
+
+<h2> 2. Integration tests </h2>
+<table>
+<tr>
+<td>De modules zullen top-down getest worden. Top-down is de beste methode, omdat het het belangrijkste is dat de inlog methode werkt. Pas als dit goed gaat, kunnen de andere methodes worden getest. Het is namelijk van belang dat er een persoonlijk account is dat data voor bijvoorbeeld de wallet applicatie en de statistieken op kan slaan, voordat we kunnen kijken of de modules deze data communiceren. </td>
+</tr>
+<tr>
+<td><ol>
+	<li> <b>Login - persoonlijke pagina</b>
+		<ol type= "a">
+		<li> Er moet gecheckt worden of de link tussen de login pagina en de persoonlijke pagina werkt. </li>
+		<li> Nadat er is ingelogd door middel van het correcte email-adres en wachtwoord moet de tester als het goed is de persoonlijke pagina aanroepen. Ook moet er getest worden of er een error pagina wordt weergegeven als de email en wachtwoord combinatie niet klopt.</li>
+		<li> Als de combinatie klopt is de persoon ingelogd en komt hij/zij op zijn/haar persoonlijke pagina, waar de kaart zichtbaar wordt en hij/zij door kan klikken naar de wallet en de statistieken. Als de combinatie onjuist is, verschijnt er een error melding.</li>
+		</ol>
+	</li>
+	<li> <b>Aanvraag rit - acceptatie rit</b>
+		<ol type= "a">
+		<li>Een belangrijke link tussen twee modules is die van ritaanvraag en rit acceptatie. Er moet getest worden of de de status van een rit tussen ritaanvraag en rit acceptatie feilloos en snel wordt gecommuniceerd. </li>
+		<li>De tester roept, na een correct ingevulde ritaanvraag, de functie aan die de chauffeurs op de hoogte stelt van de aanvraag. Vervolgens, na een geaccepteerde rit, roept de tester de functie aan die de passagier laat weten dat de rit geaccepteerd is.  </li>
+		<li>Als er een rit aanvraag wordt gedaan, ontvangen chauffeurs een pop-up waarmee ze de aanvraag kunnen accepteren of weigeren.Als de rit geaccepteerd wordt, ontvangt de passagier een pop-up en moet de aanvraag voor de overige chauffeurs niet meer beschikbaar zijn. Dit resulteert in een afgesproken rit.  </li>
+		</ol>
+	</li>
+	<li> <b>Saldo opwaarderen - saldo updaten</b>
+		<ol type= "a">
+		<li>Er moet ook getest worden of de module saldo opwaarderen een goede link heeft met de module saldo updaten. </li>
+		<li>De tester roept de functie Update.saldo aan, nadat een gebruiker zijn saldo heeft opgewaardeerd. </li>
+		<li>Er wordt het juiste saldo weergegeven. De hoeveelheid waarmee is opgewaardeerd is opgeteld bij het oude saldo en het juiste geupdate saldo komt in de plaats van het oude te staan. </li>
+		</ol>
+	</li>
+	<li> <b>Data upaten - data weergeven</b>
+		<ol type= "a">
+		<li>De statistieken moeten een goede link bevatten tussen de module die de data update en de module die deze data weergeeft in de vorm van statistieken. </li>
+		<li>De tester update de data en moet vervolgens de functie aanroepen die deze data verwerkt in overzichtelijke statistieken en vervolgens op de persoonlijke pagina weergeeft. </li>
+		<li>Er worden bijgewerkte correct statistieken weergegeven, die het verloop van de besparing van de kosten en CO2 laten zien.  </li>
+		</ol>
+	</li>
+	<li> <b>Waardering geven - waardering updaten</b>
+		<ol type= "a">
+		<li>De laatste belangrijke link die getest wordt is de link die ervoor zorgt dat een gegeven waardering gelijk wordt verwerkt in het waarderingsgemiddelde van de chauffeur. </li>
+		<li>De tester moet als het goed is, als gevolg van een ingevulde waardering, de functie aanroepen die het gemiddelde van alle ratings uitrekent. Waardoor het nieuwe gemiddelde wordt berekend. Verder moet deze tester ook, als er een lage rating wordt gegeven, de functie aanroepen die vraagt om een extra uitleg van de passagier. </li>
+		<li>Een chauffeur kan gelijk zijn nieuwe ratingsgemiddelde zien en ontvangt in het geval van een lage rating een melding met de extra uitleg. </li>
+		</ol>
+	</li>
+</ol></td>
+</tr>
+</table>
+<h2> 3. System tests </h2>
+<h2> 4. Acceptence tests </h2>
+<p> Voor de acceptance test hebben we overleg gehad met onze klant. We hebben samen met hen de volgende vragen opgesteld die we aan de gebruikers van de applicatie zouden willen voorleggen: </p>
+<ul style= "list-style-type:square">
+<li></li>
+</ul>
