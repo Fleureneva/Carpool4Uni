@@ -1,5 +1,62 @@
 <h1> Testing plan </h1>
 <h2> 1. Unit tests </h2>
+<ol>
+	<li> <b>Inloggen()</b>
+	<p>Bij deze methode gaan we de volgende punten na:
+	<ul>
+		<li>Check wat het systeem als response geeft na het invoeren van een correcte gebruikersnaam en corresponderend wachtwoord.</li>
+		<li>Check wat het systeem als response geeft na het invoeren van een correcte gebruikersnaam, met het verkeerde wachtwoord.</li>
+		<li>Check wat het systeem als response geeft als de Login knop wordt ingedrukt.</li>
+		<li>Check wat het systeem als response geeft als de velden leeg worden gelaten. </li>
+		<li>Check wat het systeem als response geeft als er wordt geklikt op ‘wachtwoord vergeten?’.</li>
+	</ul>
+	</li></p>
+	<li> <b>Rit aanmaken()</b>
+	<p>Hier worden de onderstaande punten gecheckt:
+	<ul>
+		<li>Check of het systeem een formulier als response geeft als er wordt geklikt op ‘rit aanmaken’.</li>
+		<li>Check of het systeem een error geeft als het formulier niet volledig wordt ingevuld.</li>
+		<li>Check hoe het systeem reageert als er wordt geklikt op ‘rit versturen’</li>
+		<li>Check of de aangemaakte rit wordt verwerkt.</li>
+		<li>Check of de velden van het formulier weer leeg zijn nadat de rit is verstuurd.</li>
+	</ul>
+	Deze methode roept de methode melding geven over status aan. Een aangemaakte rit heeft namelijk de status dat deze nog beschikbaar is. Deze methode wordt ook aan unit testing onderworpen, waardoor er ook gecontroleerd kan worden of het aanroepen van deze methode correct gebeurt.
+	</li></p>
+	<li> <b> Saldo opwaarderen() </b> </li>
+	<p> Deze methode wordt gecontroleerd op de volgende punten:
+	<ul>
+	<li>Check of het saldo dat wordt weergegeven ook het daadwerkelijke saldo is.</li>
+	<li>Check wat het systeem als response geeft als de Saldo opwaarderen knop wordt ingedrukt. </li>
+	<li>Check of het systeem juist gekoppeld is aan het correcte rekeningnummer en of het geld daadwerkelijk wordt afgeschreven.</li>
+	<li>Check of de betaling van de chauffeur op tijd en correct wordt gedaan. </li>
+	<li>Check of er een error of een melding wordt gegeven als het saldo te laag is.</li>
+	</ul>
+	</li></p>
+	
+	<li> <b> Melding geven over status() </b> </li>
+	<p> Deze methode wordt gecontroleerd op de volgende punten:
+	<ul>
+	<li>Check of er op het moment dat er een rit wordt aangemaakt, deze gelijk verschijnt in het rittenoverzicht.</li>
+	<li>Check of het systeem direct een melding geeft als een aangemaakte rit wordt gekozen door een passagier.</li>
+	<li>Check of het systeem een gekozen rit gelijk uit het rittenoverzicht haalt.</li>
+	<li>Check of een aangevraagde rit gelijk verschijnt op de pagina van de chauffeur.</li>
+	<li>Check of er direct een melding wordt gestuurd naar de passagier als een chauffeur een rit accepteert.</li>
+	</ul>
+	</li></p>
+	
+	<li> <b> Rit beoordelen() </b> </li>
+	<p> Deze methode wordt gecontroleerd op de volgende punten:
+	<ul>
+	<li>Check of aan het einde van elke rit het systeem de passagier vraagt om een beoordeling in te vullen.</li>
+	<li>Check of het systeem bij een lage waardering vraagt om een opmerking toe te voegen.</li>
+	<li>Check of hoe het systeem reageert als de beoordeling of opmerking niet wordt ingevuld.</li>
+	<li>Check of het systeem de juiste beoordeling bij de juiste chauffeur verwerkt.</li>
+	<li>Check of de chauffeur de opmerkingen ontvangt. </li>
+	</ul>
+	Deze methode roept de methode waarderingsgemiddelde updaten aan. Op het moment dat een beoordeling compleet ingeleverd wordt, moet het nieuwe gemiddelde gelijk geupdate worden. Omdat de samenwerking tussen deze twee modules belangrijk is, wordt deze getest door middel van een integration test.
+	</li></p>
+</ol>
+
 
 <h2> 2. Integration tests </h2>
 <table>
